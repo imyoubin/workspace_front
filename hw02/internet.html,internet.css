@@ -1,0 +1,28 @@
+@charset "utf8";
+
+
+h2{font-size: 25px;}
+h3{font-size: 20px;}
+h1{font-family: 궁서;}
+h1{font-size: 30px;}
+.a{text-decoration: underline;}
+
+.b{color:#0000ff ;}
+.b{font-style: italic;}
+.c{color: #ff0000;}
+.c{font-style: italic;}
+.d{color: #00ff00;}
+.d{ text-decoration: underline;}
+.e{color: #ff0000;}
+.e{font-style: normal;}
+.f{text-decoration: underline;}
+.y{
+    text-indent:30px;
+}
+.q{
+  background-color: #d9d9d9d9;  
+  }
+.h{color: #00ff00;}
+.h{font-style: normal;}
+
+
