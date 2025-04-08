@@ -1,13 +1,6 @@
 @charset "UTF-8";
 
-/* 초기화 */
-body, div, 
-ul, li, dl, dt, ol, 
-h1, h2, h3, h4, h5, h6, 
-form, input, select, textarea, button,  fieldset, legend,
-p, table, th, td, tr{
-    margin: 0; padding: 0;
-}
+
 
 body {
     background-color: #808080;
@@ -26,6 +19,26 @@ body {
     /* border: 1px solid #000; */
 }
 
+/* 경로표시 */
+.wrap ol{
+    list-style-type: none;
+   
+    margin: 10px 0px 10px 0px;
+}
+
+.wrap ol>li{
+    float: left;
+}
+
+.wrap ol>li::after{
+    content: ">";
+    padding: 0px 5px 0px 5px;
+}
+
+.wrap ol>li:last-child::after{
+    content: "";
+}
+
 /* 공통 */
 .form-group{
     margin: 0px 0px 10px 0px;
@@ -35,6 +48,7 @@ body {
 .form-group .form-title{
     display: inline-block;
     width: 80px;
+    vertical-align: top;
 }
 
 /* 게시판선택 */
@@ -60,11 +74,13 @@ body {
 
 /* 글내용 */
 .form-group textarea{
-    width: 685px;
+    width: 400px;
     height: 70px;
 }
 
+
 /* 첨부파일 */
+
 
 /* 버튼그룹 */
 .btn-group{

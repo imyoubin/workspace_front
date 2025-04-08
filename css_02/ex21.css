@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+@charset "utf-8";
+
+
+.body{
+=======
 @charset "utf8";
 <<<<<<< HEAD
 
@@ -10,6 +16,7 @@ p, table, th, td, tr{
     margin: 0; padding: 0;
 }
 body{
+>>>>>>> 9c47dbcccfd97c678ed729e3f162d6d24fa23ad4
     background-color: #808080;
     
     font-family: "맑은고딕";
@@ -59,5 +66,8 @@ body{
     width: 120px;
     height: 30px;
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 253a3bb4d59d8524775f42521085e1e0ba32b9b9
+>>>>>>> 9c47dbcccfd97c678ed729e3f162d6d24fa23ad4
