@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/********************************
+ * 게시판관련 페이지에서만 사용(리스트, 등록폼, 수정폼, 읽기)
+********************************/
+
+/* 리스트 */
+
+    
+.th{
+    width: 250px;
+    
+}
+.table>thead>tr{
+    width: 600px;
+    height: 500px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #000;
+    background-color: #dddddd;
+}
+
+
+
+/* /리스트 */
+
+
+
+/* 등록폼 */
+.but-search{
+    float: right;
+   
+}
+
+   
+
+
+   
+.but-ssain{
+    float: right;
+}
+
+/* /등록폼 */
