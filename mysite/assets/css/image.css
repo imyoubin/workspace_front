@@ -5,26 +5,18 @@
 ********************************/
 
 /* 리스트 */
+#profile{
+    width: 150px;
+    float: left;
+    margin-right: 15px;
+    padding-left: 50px;
+    border: 1px solid #000;
 
-table{
-   
-    width: 700px;
-    
+
 }
-
-
-th{    
-    background-color: #dddddd;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    text-align: center;
+.box{
+    width: 150px;
 }
-
-td{
-    text-align: center;
-    border-bottom: 1px solid #000000;
-}
-
 
 
 
@@ -36,18 +28,9 @@ td{
 .but-search{
     float: right;
     margin-bottom: 100px;
-
-   
-}
-.n{
-    text-align: center;
-    word-spacing: 5px;
-
-}
-.g{
-    float: right;
 }
    
+
 
 
    
