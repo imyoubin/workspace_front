@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* 특정 아이템의 교차축 정렬 */
+.container{
+    width: 500px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 3px solid #000;
+
+    
+}
+.container.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;  
+
+}
+.container.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;     /*부모속성*/
+  
+    
+}
+
+.item1{
+    font-size: 15px;
+    border: 3px solid red;
+    align-self: flex-end;     /*자식속성*/
+}
+
+.item2{
+    font-size: 20px;
+    border: 3px solid #0000ff;
+   
+}
+
+.item3{
+    font-size: 25px;
+    border: 3px solid #00ff00;
+   align-self: stretch
+
+}

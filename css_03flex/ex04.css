@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* 속성줄넘김 ,속성-아이템 그룹 간의 여유 공간*/
+.container{
+    width: 500px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 3px solid #000;
+
+    
+}
+.container.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* flex-wrap: wrap; */            /*아이템들을 한 줄에 모두 배치하고, 줄 바꿈을 허용하지 않음 (기본값)*/
+    /* flex-wrap: wrap-reverse; */    /*아이템들이 컨테이너를 벗어나면 줄 바꿈을 허용함*/
+    flex-wrap: wrap;               /*줄 바꿈을 허용하지만, 줄이 역순으로 쌓임 (넘어갔을때 쌓이는 방향이 반대)*/
+   
+    /* align-content: flex-start; */    /*시작 부분에 정렬 모든 아이템 그룹을 교차 축의 시작 부분에 배치합니다.*/
+    /* align-content: flex-end; */      /*끝 부분에 정렬 모든 아이템 그룹을 교차 축의 끝 부분에 배치합니다.*/
+    /* align-content: space-between */  /*아이템들 사이에 공간 배치 첫 번째 아이템 그룹은 시작 부분에, 마지막 아이템 그룹은 끝 부분에 배치하고 나머지 그룹 간에 동일한 간격을 설정합니다.*/ 
+    /* align-content: space-around; */  /*아이템들 사이와 양 끝에 공간 모든 아이템 그룹 간에 동일한 간격을 설정하며, 첫 번째 및 마지막 그룹은 절반 간격만 적용됩니다.*/
+    /* /* align-content: space-evenly; */ /*동일한 공간을 균등하게 배치 모든 아이템 그룹 간에 동일한 간격을 설정합니다*/
+    /* align-content: center;*/           /*중앙에 정렬 모든 아이템 그룹을 교차 축의 중앙에 배치합니다   */
+   align-content: stretch; 
+
+}
+.container.column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+    flex-wrap: wrap;
+    
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: space-between */
+    /* align-content: space-around; */
+    /* /* align-content: space-evenly; */
+    /* align-content: center; */
+    align-content: stretch;
+}
+
+.item1{
+    font-size: 15px;
+    border: 3px solid red;
+}
+
+.item2{
+    font-size: 20px;
+    border: 3px solid #0000ff;
+}
+
+.item3{
+    font-size: 25px;
+    border: 3px solid #00ff00;
+}
