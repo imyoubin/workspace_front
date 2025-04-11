@@ -6,24 +6,21 @@
 
 /* 리스트 */
 
-table{
-   
-    width: 700px;
+
+    
+.th{
+    width: 250px;
     
 }
-
-
-th{    
+.table>thead>tr{
+    width: 600px;
+    height: 500px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #000;
     background-color: #dddddd;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    text-align: center;
 }
 
-td{
-    text-align: center;
-    border-bottom: 1px solid #000000;
-}
+
 
 
 
@@ -35,24 +32,16 @@ td{
 /* 등록폼 */
 .but-search{
     float: right;
-    margin-bottom: 100px;
-
    
 }
-.n{
-    text-align: center;
-    word-spacing: 5px;
 
-}
-.g{
+   
+
+
+   
+.but-ssain{
     float: right;
 }
-   
 
-
-   
-/* .but-ssain{
-    float: right;
-} */
 
 /* /등록폼 */
