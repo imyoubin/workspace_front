@@ -5,20 +5,19 @@
 ********************************/
 
 /* 리스트 */
-#profile{
+
+.img-box.box{
     width: 150px;
-    float: left;
-    margin-right: 15px;
-    padding-left: 50px;
+    height: auto;
+    overflow: hidden;
     border: 1px solid #000;
-
-
-}
-.box{
-    width: 150px;
+    margin : 40px;
+    padding: 5px 5px 25px 5px;
 }
 
-
+.img{
+    width: 180px;
+}
 
 /* /리스트 */
 

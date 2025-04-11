@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* 추축의 폭사이즈 */
+.container{
+    width: 500px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 3px solid #000;
+
+    
+}
+.container.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;  
+
+}
+.container.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+    
+}
+
+.item1{    
+    border: 3px solid red;
+    /* flex-basis: auto; */
+    flex-basis: 0px;      /*속성-자식요소 추축의 폭 사이즈*/
+    flex-grow: 1;         /*속성- 자식요소 추축의 폭 사이즈 비율(여백이 남았을때)*/
+    flex-shrink: 1;       /*속성- 자식요소 추축의 폭 사이즈 비율(여백이 모자를때)*/
+   
+}
+
+.item2{    
+    border: 3px solid #0000ff;
+    /* flex-basis: auto; */
+    flex-basis: 0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.item3{
+    border: 3px solid #00ff00;    
+    /* flex-basis: auto; */
+    flex-basis: 00px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
