@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 @charset "utf-8";
-
-
-.body{
-=======
-@charset "utf8";
-<<<<<<< HEAD
-
 /* 초기화 */
+
 body, div, 
 ul, li, dl, dt, ol, 
 h1, h2, h3, h4, h5, h6, 
@@ -16,7 +9,6 @@ p, table, th, td, tr{
     margin: 0; padding: 0;
 }
 body{
->>>>>>> 9c47dbcccfd97c678ed729e3f162d6d24fa23ad4
     background-color: #808080;
     
     font-family: "맑은고딕";
@@ -66,8 +58,4 @@ body{
     width: 120px;
     height: 30px;
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 253a3bb4d59d8524775f42521085e1e0ba32b9b9
->>>>>>> 9c47dbcccfd97c678ed729e3f162d6d24fa23ad4
+

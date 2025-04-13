@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/* 레이아웃 */
+#wrap{
+    width: 1000px;
+    margin: 0 a;
+}
+header{
+    padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+#content{
+    border: 1px solid #000;
+}
+footer{
+    border: 1px solid #000;
+}
+/* /레이아웃*************************/
+
+/* /해더 ***************************/
+header h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: #79b30b;    
+}
+header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+header ul>li{
+    padding: 3px 6px 3px 6px;
+    margin-left: 5px;
+    border: 1px solid #bfbfbf;
+    background-color: #fff;
+    font-size: 10px;    
+}
+/* /헤더****************************/
+
+/* /네비 ***************************/
+nav ul{
+    height: 50px;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+nav ul>li{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    /* border: 1px solid red; */
+    line-height: 50px;
+}
+
+/* /네비 ***************************/
+
+/* /컨텐츠 ************************/
+
+
+/* /컨텐츠 ************************/

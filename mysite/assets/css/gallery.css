@@ -22,10 +22,15 @@
 
 .img-box .box .img{
     width: 190px;
+    border: 1px solid #808080;
+}
+.but-search{
+    float: right;
 }
    
-/* .but-ssain{
+ .but-ssain{
     float: right;
-} */
+} 
+
 
 /* /등록폼 */
