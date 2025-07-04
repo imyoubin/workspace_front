@@ -1,0 +1,47 @@
+!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 변수 스코프</title>
+</head>
+<body>
+    <h1>자바스크립트</h1>
+
+    <script>
+        console.log('============================================');
+        console.log('#변수의 범위 (스코프)');
+
+        let x;  // 전역 변수 (선언만, 값 없음)
+
+        function testFunc() {
+            let y;    // 지역 변수 (함수 내부에서만 사용 가능)
+            x = 10;   // 전역 변수에 값 할당 (x는 함수 외부에서도 접근 가능)
+            y = 20;   // 지역 변수 값 할당
+            z = 30;   // 선언 없이 사용 → "암묵적 전역 변수"(매우 위험, 지양)
+            
+            if (y == 20) {
+                let b = 40;  // 블록 지역 변수 (if 블록 안에서만 유효)
+                b++;
+                console.log("b = " + b);  // 가능 (if 블록 내부니까)
+            }
+
+            // 이곳에서 접근 가능 여부:
+            // console.log("b = " + b);  // 불가 (if 블록 밖이므로 에러 발생)
+            //console.log("b = " + b); //안됨
+            console.log("x = " + x);  // 가능 (전역 변수)
+            console.log("y = " + y);  // 가능 (함수 지역 변수)
+            console.log("z = " + z);  // 가능 (암묵적 전역 변수)
+
+        }
+
+        testFunc();
+
+        // 함수 외부에서 접근 가능 여부:
+        // console.log("b = " + b);  // 불가 (블록 지역 변수)
+        console.log("x = " + x);     // 가능 (전역 변수)
+        // console.log("y = " + y);  // 불가 (함수 지역 변수)
+        console.log("z = " + z);     // 가능 (암묵적 전역 변수 - 위험!)
+
+    </script>
+</body>
+</html>

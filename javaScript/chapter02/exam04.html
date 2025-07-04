@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="" rel="stylesheet">
+
+</head>
+
+<body>
+    
+	<h1>자바스크립트</h1>
+	<div id="nav">
+		<ul>
+			<li>게시판</li>
+			<li class="active">갤러리</li>
+			<li>방명록</li>
+		</ul>
+	</div>
+	
+	<div>
+		<p class="red">내용1입니다.</p>
+
+		<p>내용2입니다.</p>
+	</div>
+
+	<form action="" method="">
+		<label>아이디</label>
+		<input type="text" name="userId" value="jung" placeholder="아이디를 입력해주세요"><br>
+		
+		<label>패스워드</label>
+		<input type="password" name="pw" value=""><br>
+
+		<label>이름</label>
+		<input type="text" name="userName" value="정우성"><br>
+		
+		<button type="submit">전송</button>
+	</form>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('돔트리 완료');
+
+	// h1 빨간색
+	let h1Tag = document.querySelector('h1');
+	console.log(h1Tag);
+	h1Tag.style.color = '#ff0000';
+
+	// 첫 번째 li
+	let liTag = document.querySelector('li');
+	console.log(liTag);
+
+	// 모든 li 태그 파란색
+	let liTags = document.querySelectorAll('li');
+	console.log(liTags);
+	for(let i=0; i<liTags.length; i++){
+		liTags[i].style.color = '#0000ff';
+	}
+
+	// #nav > ul > li.active 빨간색
+	let actTag = document.querySelector('#nav ul > li.active');
+	console.log(actTag);
+	actTag.style.color = '#ff0000';
+
+	// li 태그와 label 태그 모두  초록색
+	let liAndLabelTags = document.querySelectorAll('#nav ul>li, label');
+	console.log(liAndLabelTags);
+	for(let i=0; i<liAndLabelTags.length; i++){
+		liAndLabelTags[i].style.color = '#00ff00';
+	}
+
+	//name "userid"인 요소 빨강으로
+	let txtTag = document.querySelector("input[name=userId]");
+	console.log(txtTag);
+	txtTag.style.color = '#ff0000';
+
+	//마지막 li요소 빨강으로
+	/*
+	let LiTag = document.querySelector('li');
+	liTag[liTag.length-1].style.color = '#ff0000';
+	*/
+
+	let lastLiTag = document.querySelector('li:last-child');
+	console.log(lastLiTag);
+	lastLiTag.style.color = '#ff0000';
+
+	
+
+
+});
+
+
+</script>
+</body>
+
+
+
+</html>

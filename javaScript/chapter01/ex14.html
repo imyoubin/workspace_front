@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 변수 스코프</title>
+</head>
+<body>
+    <h1>자바스크립트</h1>
+
+    <script>
+        console.log('============================================');
+        console.log('#객체');
+
+        // 이름 페스워드 번호 등록시간 guestbookVo
+       // GuestbookVo guestbookVo = new guestbookVo();
+       let guestbookVo={
+        name : '정우성',
+        password:'1234',
+        Content:'방명록내용',
+        showInfo: function() {
+            console.log('============================================');
+            console.log('방문자:' + this.name);
+            console.log('방문자:' + this.Content);
+            console.log('============================================');
+        }
+       }
+
+       console.log(guestbookVo.name);
+       console.log(guestbookVo.password);
+       console.log(guestbookVo.Content);
+       console.log(guestbookVo['Content']);
+
+       guestbookVo.showInfo();
+    </script>
+</body>
+</html>

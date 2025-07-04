@@ -1,0 +1,39 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+           
+            
+            console.log('============================================');
+            console.log('#기명함수의 변수와 익명함수 이름이 같을떄');
+
+            /*
+            let str = "global";
+
+            function checkscope(){
+                let str = "local";
+                console.log(str);
+            }
+            checkscope();           //local
+            console.log(str);       //global
+            */
+           ////////////////////////////////////////////////////////////
+
+           let str = "global";
+
+           function checkscope(){
+                str = "local";
+                str2 = "로컬";
+           }
+           checkscope();   
+           console.log(str);        //local
+           console.log(str2);       //로컬
+
+    </script>
+</body>
+</html>

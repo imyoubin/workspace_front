@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 배열+객체(리스트 개념)</title>
+</head>
+<body>
+    <h1>자바스크립트</h1>
+
+    <script>
+        console.log('============================================');
+        console.log('#자바의 리스트 개념 (연습문제)');
+
+        // 배열생성
+        let shapeList = [];  
+
+        // VO1 
+       let shapeVo1 = {
+            name: '삼각형',
+            width: 5,
+            height: 10,
+            area: function() {
+        let calarea = (this.width * this.height) / 2;
+        return calarea;
+    }
+};
+       
+
+        // VO2 
+        let shapeVo2 = {
+            name: '사각형',
+            width: 5,  // 콜론(:) 사용
+            height: 5,
+            area: function() {
+        let calarea = this.width * this.height;
+        return calarea;
+    }
+}
+        //rectangle.width=5; //필드를 추가할수있다
+       
+        
+        // VO3
+        let shapeVo3 = {
+            name: '원',
+            radius: 5,
+            area: function() {
+                let calarea = 3.14*this.radius*this.radius;
+                return calarea;
+            }
+        };
+        
+        // 배열에 도형추가
+        shapeList.push(shapeVo1);
+        shapeList.push(shapeVo2);
+        shapeList.push(shapeVo3);
+
+        //콘솔로 출력하기(개발용)
+        console.log(shapeList);
+
+       
+        for (let i = 0; i < shapeList.length; i++) {
+            console.log(shapeList[i].name + "의 넓이는 = " + shapeList[i].area().toFixed(2));
+        }
+    </script>
+</body>
+</html>

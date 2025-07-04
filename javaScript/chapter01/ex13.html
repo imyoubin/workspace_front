@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 변수 스코프</title>
+</head>
+<body>
+    <h1>자바스크립트</h1>
+
+    <script>
+        console.log('============================================');
+        console.log('#배열');
+
+        let arr01 = new Array();
+        arr01[0] = 1;
+        arr01[1] = 2;
+        arr01[2] = 3;
+
+        console.log(arr01[1]);
+
+        console.log('============================================');
+        ////////////////////////////////////////////////////////////
+
+        let arr = [10, 20, 30, 40, 50];
+        console.log(arr[1]);
+
+        let no = arr01[4];
+        console.log(no);  // undefined (값 없음)
+
+        // 배열을 숫자로 덮어쓰지 않고 주석 처리
+        // arr01 = 300;  //
+        // console.log(arr01[2]);
+
+        arr01[5] = 1000;
+
+        for (let i = 0; i < arr01.length; i++) {
+            console.log(arr01[i]);
+        }
+
+        console.log('============================================');
+        console.log(arr01);
+        console.log('============================================');
+
+        ///////////////////////////////////////////////////////////
+        // 빈 배열 선언
+        let arr02 = [];  
+        arr02[0] = 1;
+        arr02[1] = 2;
+        arr02[2] = 3;
+
+        for (let i = 0; i < arr02.length; i++) {
+            console.log(arr02[i]);  
+        }
+
+        console.log('============================================');
+
+        ///////////////////////////////////////////////////////////
+        // 자바스크립트의 다양한 타입 저장
+        let arr03 = [];
+        arr03[0] = 1;
+        arr03[1] = 1.5;
+        arr03[2] = '안녕';
+        arr03[3] = 'hello';
+        arr03[4] = 5 > 3;
+        arr03[5] = function () { 
+            console.log('정우성')
+         };  
+
+        for (let i = 0; i < arr03.length; i++) {
+            if (typeof arr03[i] === 'function') {
+                arr03[i]();  
+            } else {
+                console.log(arr03[i]);
+            }
+        }
+        console.log('============================================');
+        arr03[5]();//함수의 실행
+        //변수에 함수를 넣을수 있다
+        //변수이름ㅇ르 부르고 () 실행한다 --> 이름 부르는거랑 실행을 구분해라
+        console.log('============================================');
+
+        let arr04 =[1,  2.5, '안녕',['박명수','정우성','유재석']];
+        //          [0] [1]   [2]   [3]
+        console.log(arr04[2]);
+        console.log(arr04[3][1]); 
+
+        console.log('============================================');
+
+        let arr05 =['이효리'];
+        arr05=['정우성'];       //방번호 알아야 할수 있다
+        arr05.push('유재석'); //맨끝에추가
+        arr05.push('박명수');
+        console.log(arr05);
+
+        arr05.pop();
+        console.log(arr05);
+
+        //참고 다양한 함수가 더 있다 더 많이 찾아보자
+        arr05.splice(1,1)
+        console.log(arr05);
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 배열+객체(리스트 개념)</title>
+</head>
+<body>
+    <h1>자바스크립트</h1>
+
+    <script>
+        console.log('============================================');
+        console.log('#자바의 리스트 개념 (배열 + 객체)');
+
+        let personlist = [];  // 배열 생성 (리스트 개념)
+
+        // VO1
+        let personVo01 = {
+            no: '1',
+            name: '박명수',
+            hp: '010-1111-1111',
+            company: '02-1111-1111'
+        };
+
+        // VO2
+        let personVo02 = {
+            no: '2',
+            name: '유재석',
+            hp: '010-2222-2222',
+            company: '02-2222-2222'
+        };
+
+        // VO3
+        let personVo03 = {
+            no: '3',
+            name: '서장훈',
+            hp: '010-3333-3333',
+            company: '02-3333-3333'
+        };
+
+        
+        personlist.push(personVo01);
+        personlist.push(personVo02);
+        personlist.push(personVo03);
+
+        
+        console.log(personlist);
+
+        
+        for (let i = 0; i < personlist.length; i++) {
+            console.log(personlist[i].name+"(" +personlist[i].hp+")");
+        }
+    </script>
+</body>
+</html>

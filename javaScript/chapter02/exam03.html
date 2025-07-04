@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="" rel="stylesheet">
+
+</head>
+
+<body>
+	
+	<!--클래스-->
+	<ul>
+		<li class="red"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="blue"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="red"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="blue"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="green"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+	</ul>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('돔트리 완료');
+
+	//틀래스명이 red인 요소의 첫번째를 빨간색으로    배열로 온다
+	let redTags = document.getElementsByClassName('red');
+	console.log(redTags);
+	redTags[0].style.color = '#ff0000';
+	
+	//틀래스명이 blue인 요소의 첫번째를 빨간색으로    배열로 온다
+	let blueTags = document.getElementsByClassName('blue');
+	console.log(blueTags);
+	blueTags[0].style.color = '#0000ff';
+
+	let seTag = document.getElementById('second');
+	let liTags = document.getElementsByTagName('li');
+	let blueTags2 = document.getElementsByClassName('blue');
+
+});
+
+</script>
+
+</body>
+
+
+
+</html>
