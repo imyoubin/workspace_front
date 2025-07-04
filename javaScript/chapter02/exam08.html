@@ -52,6 +52,112 @@
 
 <script>
 
+	let personList = [];
+
+	let personVO1 = {
+		no: 'n-01',
+		name: '정우성',
+		hp: '010-1111-1111',
+		company: '02-1111-1111'
+	}
+
+	let personVO2 = {
+		no: 'n-02',
+		name: '이효리',
+		hp: '010-2222-2222',
+		company: '02.2222-22222'
+	}
+
+	let personVO3 = {
+		no: 'n-03',
+		name: '박명수',
+		hp: '010-3333-3333',
+		company: '02-3333-3333'
+	}
+	personList.push(personVO1);
+	personList.push(personVO2);
+	personList.push(personVO3);
+
+	for(let i=0; i<personList.length; i++){
+		console.log(personList[i].name+"("  +personList[i].hp + ")");
+	}
+
+	document.addEventListener('DOMContentLoaded', function(){
+		console.log('돔르리 완트')
+
+		//<h1 id="logo">자바스크립트</h1>
+
+			
+		
+		let tag01 = document.querySelector('h1');
+			console.log(tag01);
+			console.log(tag01.parentElement);
+			console.log(tag01.parentElement.parentElement);
+				/*
+		<tr id="n-1">
+				<td>정우성</td>
+				<td id="h-1">010-1111-1111</td>
+				<td>02-1111-1111</td>
+			</tr>
+		*/
+		let tag02 = document.querySelector('#n-1');
+			console.log(tag02);
+			console.log(tag02.parentElement);
+			console.log(tag02.parentElement.parentElement);
+
+			console.log('--------------------------');
+
+			/*
+				<tr id="n-2">
+					<td>이효리</td>
+					<td id="h-2">010-2222-2222</td>
+					<td>02-2222-2222</td>
+				</tr>
+		*/
+
+		let tag03 = document.querySelector('#n-2');
+			console.log(tag04);
+	
+		//#n-2 위치일때  본인의 tr의 id값 출력   n-2
+		let id = tag03.id;
+		console.log(id);
+
+		
+
+		//#n-2 위치일때  이효리 이름출력
+		console.log(tag03.firstElementChild.innerText);
+		
+		//#n-2 위치일때  이효리 회사번호
+		console.log(tag03.lastElementChild.innerText)
+		console.log("-------------------------------------")	
+		
+		let tag04 = document.querySelector('#h-2')
+	   		console.log(tag05);
+    
+	//tag05를 기준으로 이동
+	//--1.부모로 이동
+	console.log(tag04.parentElement);
+
+	//--2.부모의 이전형제를 찾는다
+	console.log(tag04.parentElement.previousElementSibling);
+
+	//--3.마지막 자식을 찾는다
+	console.log(tag04.parentElement.previousElementSibling.lastElementChild);
+
+	//--4.텍스트 값을 가져온다
+	console.log(tag04.parentElement.previousElementSibling.lastElementChild.innerText);
+
+	//#h-2 위치일때  박명수 이름출력
+	let result = tag04.parentElement.nextElementSibling.firstElementChild.innerText;
+	console.log(result);
+		
+
+
+	});
+
+
+		
+
 </script>
 
 </body>
