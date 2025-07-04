@@ -2,38 +2,38 @@
     <head>
         <meta charset="UTF-8">
         <title>JavaScript</title>
+
     </head>
+
     <body>
         <h1>자바스크립트</h1>
-
         <script>
-           
-            
-            console.log('============================================');
-            console.log('#기명함수의 변수와 익명함수 이름이 같을떄');
-
+            //이렇게 사용하지 않는다 
+            //공부하고 싶으면 gpt 아주자세히 설명해 달라고해 (호이스팅)
             /*
-            let str = "global";
-
-            function checkscope(){
-                let str = "local";
-                console.log(str);
-            }
-            checkscope();           //local
-            console.log(str);       //global
+            #호이스팅
+            #1번째 조사 내용
+                -정의된 함수
+                -var 변수 (let변수는 아님)
             */
-           ////////////////////////////////////////////////////////////
+            console.log('=====================================');
+            console.log('#익명함수의변수 와 기명함수의 이름이 같을때');
 
-           let str = "global";
+            var test = function(){
+                console.log("testA함수 입니다.");
+            }
 
-           function checkscope(){
-                str = "local";
-                str2 = "로컬";
-           }
-           checkscope();   
-           console.log(str);        //local
-           console.log(str2);       //로컬
+            function test(){
+                console.log("testB함수 입니다.");
+            }
 
-    </script>
-</body>
+            test();
+
+
+        </script>
+
+
+    </body>
+
+
 </html>

@@ -20,21 +20,20 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-	console.log('돔트리 완료');
+	console.log('돔트리 완성');
 
-	//틀래스명이 red인 요소의 첫번째를 빨간색으로    배열로 온다
-	let redTags = document.getElementsByClassName('red');
+	//class 명으로 가져오기
+
+	//클래스명이 red인 요소의 첫번쨀르 빨간색으로  --> 배열로온다
+	let redTags = document.getElementsByClassName('red')
 	console.log(redTags);
-	redTags[0].style.color = '#ff0000';
-	
-	//틀래스명이 blue인 요소의 첫번째를 빨간색으로    배열로 온다
-	let blueTags = document.getElementsByClassName('blue');
-	console.log(blueTags);
-	blueTags[0].style.color = '#0000ff';
+	redTags[0].style.color= '#ff0000';
 
-	let seTag = document.getElementById('second');
-	let liTags = document.getElementsByTagName('li');
-	let blueTags2 = document.getElementsByClassName('blue');
+	//클래스명이 blue인 요소의 두번째를 초록색으로
+    let blueTags = document.getElementsByClassName('blue');
+	console.log(blueTags);
+	blueTags[1].style.color='#00ff00';
+
 
 });
 

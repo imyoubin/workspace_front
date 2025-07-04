@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	h1Tags[0].style.color = '#00ff00';
 
 
-	//모든 p요소를 파란색으로 변경
+	//모든 p요소를 파란색으로 변경 --> 배열로 오기때문에 모두 변경은 for문 사용
 	let pTags = document.getElementsByTagName('p');
 	console.log(pTags);
 	for(let i = 0; i < pTags.length; i++){
