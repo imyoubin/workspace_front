@@ -41,30 +41,39 @@
         </tbody>
     </table>
     <br>
-
-  <!------------------------------------------------------------->  
+<!------------------------------------------------------------->  
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-	console.log('돔트리완료');
+console.log('돔트리완료');
 
     let btn = document.querySelector('#btnMakeNo');
-    console.log(btn);
+        console.log(btn);
 
-    btn.addEventListener ('click', function(){
-        console.log('버튼클릭')
+        btn.addEventListener ('click', function(){
+        console.log('버튼클릭');
 
-        
+        let numbers = [];
+        for(let i = 0; i < 6; ){
+            let num = Math.floor(Math.random() * 45) + 1;
+            if(!numbers.includes(num)){
+                numbers.push(num);
+                i++; 
+            }
+        }
+
+        numbers.sort((a, b) => a - b);
+
+            let tds = document.querySelectorAll('tbody tr:first-child td');
+        for(let i = 0; i < tds.length; i++){
+      
+            tds[i].textContent = numbers[i];
+    }
+
     });
-
-    
-
-
 });
 
 
-</script>    
+</script>
+
 </body>
-
-
-
 </html>
