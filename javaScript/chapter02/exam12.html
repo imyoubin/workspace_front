@@ -19,12 +19,34 @@
     </div>
     
 
+<!------------------------------------------------------------>
+<<script>
+//돔트리가 완료되었을(때 --> 이벤트)
+document.addEventListener('DOMContentLoaded', function(){
+    console.log('돔트리완료');
+
+    //버튼에 내용을 추가해논다 (작동X) -->실제작동은 이벤트가 발생할때
+    let btnTag = document.querySelector('#btn');
+
+
+    //버튼이 클릭되었을(때  --> 이벤트)
+    btnTag.addEventListener('click', function(){
+        console.log('버튼클릭');
+
+        //h1요소를 잡아온다
+        let h1Tag = document.querySelector('#display');
+        //-h1을 글자 홍길동으로 적용
+        //-글자색을 파란색 적용
+        h1Tag.textContent = '홍길동';
+        h1Tag.style.color = '#0000ff';
+    });
+
+
+});  
+</script>
+
 
 </body>
 
-<script>
-
-
-</script>
 
 </html>

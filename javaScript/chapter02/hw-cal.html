@@ -43,12 +43,48 @@
 	
 	
 </div>
+<!-------------------------------------------->
+<script>
+	//돔트리가 완료 되었을때	
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('돔트리완료');
 
+	let display = document.querySelector('#display');
+	let buttons = document.querySelectorAll('#btnArea > button');
+
+	for(let i = 0; i < buttons.length; i++) {
+		buttons[i].addEventListener('click', function(){
+			let value = this.textContent;
+
+			if(value === 'C') {
+				display.value = '';
+			} else if (value === '=') {
+				let result = 0;
+				let str = display.value;
+
+				if(str.includes('+')){
+					let nums = str.split('+');
+					result = parseFloat(nums[0]) + parseFloat(nums[1]);
+				} else if(str.includes('-')){
+					let nums = str.split('-');
+					result = parseFloat(nums[0]) - parseFloat(nums[1]);
+				} else if(str.includes('*')){
+					let nums = str.split('*');
+					result = parseFloat(nums[0]) * parseFloat(nums[1]);
+				} else if(str.includes('/')){
+					let nums = str.split('/');
+					result = parseFloat(nums[0]) / parseFloat(nums[1]);
+				} else {
+					result = str;
+				}
+				display.value = result;
+			} else {
+				display.value += value;
+			}
+		});
+	}
+});
+</script>
 
 </body>
-
-
-
-
-
 </html>
