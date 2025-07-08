@@ -45,46 +45,138 @@
 </div>
 <!-------------------------------------------->
 <script>
-	//돔트리가 완료 되었을때	
-document.addEventListener('DOMContentLoaded', function(){
-	console.log('돔트리완료');
+document.addEventListener("DOMContentLoaded", function(){
+		
+	//html(DOM)의 자바스크립트 객체화
+	let display = document.querySelector("#display");
 
-	let display = document.querySelector('#display');
-	let buttons = document.querySelectorAll('#btnArea > button');
+	let btn9 = document.querySelector("#btn9");
+	let btn8 = document.querySelector("#btn8");
+	let btn7 = document.querySelector("#btn7");
+	let btn6 = document.querySelector("#btn6");
+	let btn5 = document.querySelector("#btn5");
+	let btn4 = document.querySelector("#btn4");
+	let btn3 = document.querySelector("#btn3");
+	let btn2 = document.querySelector("#btn2");
+	let btn1 = document.querySelector("#btn1");
+	let btn0 = document.querySelector("#btn0");
 
-	for(let i = 0; i < buttons.length; i++) {
-		buttons[i].addEventListener('click', function(){
-			let value = this.textContent;
+	let btnDiv = document.querySelector("#btnDiv");
+	let btnMulti = document.querySelector("#btnMulti");
+	let btnPlus = document.querySelector("#btnPlus");
+	let btnMinus = document.querySelector("#btnMinus");
 
-			if(value === 'C') {
-				display.value = '';
-			} else if (value === '=') {
-				let result = 0;
-				let str = display.value;
+	let btnClear = document.querySelector("#btnClear");
+	let btnEqual = document.querySelector("#btnEqual");
 
-				if(str.includes('+')){
-					let nums = str.split('+');
-					result = parseFloat(nums[0]) + parseFloat(nums[1]);
-				} else if(str.includes('-')){
-					let nums = str.split('-');
-					result = parseFloat(nums[0]) - parseFloat(nums[1]);
-				} else if(str.includes('*')){
-					let nums = str.split('*');
-					result = parseFloat(nums[0]) * parseFloat(nums[1]);
-				} else if(str.includes('/')){
-					let nums = str.split('/');
-					result = parseFloat(nums[0]) / parseFloat(nums[1]);
-				} else {
-					result = str;
-				}
-				display.value = result;
-			} else {
-				display.value += value;
-			}
-		});
-	}
+	//출력을 위한 문자열 변수 
+	let str = '';   
+
+	//리스너(이벤트) 등록
+	btn9.addEventListener("click", function(){
+		str += 9; 
+		display.value = str
+	});
+
+	btn8.addEventListener("click", function(){
+		str += 8; 
+		display.value = str;
+	});
+
+	btn7.addEventListener("click", function(){
+		str += 7; 
+		display.value = str;
+	});
+
+	btn6.addEventListener("click", function(){
+		str += 6; 
+		display.value = str;
+	});
+
+	btn5.addEventListener("click", function(){
+		str += 5; 
+		display.value = str;
+	});
+
+	btn4.addEventListener("click", function(){
+		str += 4; 
+		display.value = str;
+	});
+
+	btn3.addEventListener("click", function(){
+		str += 3; 
+		display.value = str;
+	});
+
+	btn2.addEventListener("click", function(){
+		str += 2; 
+		display.value = str;
+	});
+
+	btn1.addEventListener("click", function(){
+		str += 1; 
+		display.value = str;
+	});
+
+	btn0.addEventListener("click", function(){
+		str += 0; 
+		display.value = str;
+	});
+
+	btnDiv.addEventListener("click", function(){
+		str += "/"; 
+		display.value = str;
+	});
+
+	btnMulti.addEventListener("click", function(){
+		str += "*"; 
+		display.value = str;
+	});
+	
+	btnPlus.addEventListener("click", function(){
+		str += "+"; 
+		display.value = str;
+	});
+
+	btnMinus.addEventListener("click", function(){
+		str += "-"; 
+		display.value = str;
+	});
+
+	btnClear.addEventListener("click", function(){
+		str = ""; 
+		display.value = str;
+	});
+
+	btnEqual.addEventListener("click", function(){
+		if(str.includes("/")){ //문자열에 "/"를 포함하고 있으면 나누기 계산
+			var data = str.split("/")
+			str=parseInt(data[0])/parseInt(data[1]);
+			
+		}else if(str.includes("*")){ //문자열에 "*"를 포함하고 있으면 곱하기 계산
+			var data = str.split("*")
+			str=parseInt(data[0])*parseInt(data[1]);
+			
+		}else if(str.includes("+")){ //문자열에 "+"를 포함하고 있으면 플러스 계산
+			var data = str.split("+")
+			str=parseInt(data[0])+parseInt(data[1]);
+			
+		}else if(str.includes("-")){ //문자열에 "-"를 포함하고 있으면 마이너스 계산
+			var data = str.split("-")
+			str=parseInt(data[0])-parseInt(data[1]);
+			
+		}
+		
+		display.value = str;  //계산한 결과를 화면에 출력
+		//str="";               //값을 초기화(다음계산할을 위해 값 초기화)
+	});
+
+
 });
+
 </script>
 
-</body>
+
+
+
 </html>
