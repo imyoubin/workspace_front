@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lan="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	.red {color: red;}
+	
+	.blue {color: blue;}
+
+</style>
+<!--css-->
+<!--js-->
+<script src="../assets/js/jquery-3.7.1.js"></script>
+
+
+</head>
+
+<body>
+
+	<!--val(), val("값")-->
+	이름:<input type="text" name="name" value=""><br>
+	비밀번호:<input type="password" name="password" value=""><br>
+	<textarea name="content">fdsafdasfd</textarea>
+	
+	<br><br>
+	
+	이름2:<input type="text" name="name2" value="홍길동"><br>
+	비밀번호2:<input type="password" name="password2" value="1234"><br>
+	<textarea name="content2">산토끼토끼야</textarea>
+
+<script>
+$(document).ready(function(){
+	console.log('돔트리완료');
+
+	//태그잡아오기
+	let nameTag = $('input[name="name"]');
+	let pwTag = $('[name="password"]');
+	let txTag = $('[name="content"]');
+
+	//이름
+	nameTag.val('정우성');
+
+	//패스워드
+	pwTag.val('1234');
+	
+	//컨텐츠
+	txTag.val('학교종이 땡땡땡');
+
+	////////////////////////////////////////////
+	//태그잡아오기
+	let name2Tag = $('[name="name2"]');
+	let pw2Tag = $('[name="password2"]');
+	let tx2Tag = $('[name="content2"]');
+
+	//이름
+	console.log(name2Tag);
+	console.log(name2Tag.val());
+
+	//패스워드
+	console.log(pw2Tag.val());
+
+	//출력
+	console.log(tx2Tag.val());
+
+});
+</script>	
+	
+</body>
+
+
+</html>
+
+
+
+
+
+
+

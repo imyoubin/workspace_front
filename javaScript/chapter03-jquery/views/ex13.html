@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- css -->
+<!-- js -->
+<script src="../assets/js/jquery-3.7.1.js"></script>
+
+</head>
+<body>
+	
+	<!--$(this)-->
+	<ul>
+		<li id="first" class="red" data-bno="1" data-pno="5">첫번째 아이템입니다.</li>
+		<li id="second" class="blue" data-bno="2" data-pno="4"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del" data-bno="3" data-pno="5">세번째아이템입니다.</li>
+		<li data-bno="4" data-pno="3"><strong>네번째 아이템입니다.</strong></li>
+	</ul>
+	<button>버튼</button>
+
+<!-- -------------------------------------------------------- -->
+<script>
+$(document).ready(function(){
+	console.log('돔트리완료');
+
+	/*
+	//js
+	let fiTag2 = document.querySelector('#first');
+	console.log(fiTag2);
+	console.log(fiTag2.className);
+	*/
+
+	//클릭한 li요소의 컨텐츠(글자)를 변경하세요
+	//방법1
+	//jquery 속성값 가져오기
+	let fiTag = $('#first');
+	console.log(fiTag.attr('class'));
+	console.log(fiTag.attr('id'));
+	
+	//첫번째 li 에 이벤트 등록
+	fiTag.on('click', function(){
+		console.log('클릭');
+	});
+	console.log('----------------------------------');
+	
+
+	/*
+	let liTags = $('li');
+	console.log(liTags);
+	liTags.on('click', function(){
+		console.log('li클릭'); //이벤트 등록 확인용
+
+		//li요소중에 이번에 클릭된 특정li를 정확하게 알려준다
+		let $this = $(this);
+		console.log($this);
+
+		//$this 의 내용을 변경해준다
+		$this.text('변경된 문구')
+
+	});
+	*/
+
+	//li를 클릭했을때
+	$('li').on('click', function(){
+		console.log('li클릭'); //이벤트 등록 확인용
+
+		//li요소중에 이번에 클릭된 특정li를 정확하게 알려준다
+		let $this = $(this);
+		console.log($this);
+
+		//$this 의 내용을 변경해준다
+		$this.text('변경된 문구')
+
+
+		//////////////////////////////////////////////////
+		//속성값 출력해보기
+		//id를 출력
+		let idName = $this.attr('id');
+		console.log(idName);
+		//class네임 출력
+		let className = $this.attr('class');
+		console.log(className);
+
+		//data 값 가져오기
+		let bno = $this.data('bno')
+		console.log(bno);
+
+		let pno = $this.data('pno');
+		console.log(pno);
+
+		//vo
+		let pVO = {
+			bno: bno,
+			pno: pno
+		};
+
+		console.log(pVO);
+	});
+
+});
+
+</script>
+
+</body>
+
+</html>

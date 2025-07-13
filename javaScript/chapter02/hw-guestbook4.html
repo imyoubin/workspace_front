@@ -65,6 +65,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     console.log('돔트리완성');
 
+    
     //모든 a요소 가져오기
     let aTags = document.querySelectorAll('td>a');
     console.log(aTags);
@@ -75,23 +76,20 @@ document.addEventListener('DOMContentLoaded', function(){
             console.log('클릭');
             event.preventDefault(); //원래하려고 했던거(링크 이동)를 못하게 한다
 
-            //console.log(this);  //이벤트를 가지고 있는애
-            //console.log(this.target);   //클릭한애
-
-            let no = event.target.dataset.no;
-            let uno = event.target.dataset.uno;
+            /*
+            console.log(this);  //이벤트를 가지고 있는애
+            console.log(event.target);  //클릭한애
+            */
+            let no =event.target.dataset.no;
+            let uno =event.target.dataset.uno;
             let gNo = event.target.dataset.guestbookno;
 
             console.log(no);
             console.log(uno);
             console.log(gNo);
 
-
-
         });
     }
-
-
 });
 
 </script>
